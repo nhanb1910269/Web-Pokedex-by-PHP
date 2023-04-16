@@ -1,0 +1,32 @@
+
+a{
+    list-style: none;
+    text-decoration: none;
+    padding-left: 20px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+    font-size: 20px;
+    text-decoration: none;
+}
+.id_dangky{
+    right: 100px;
+}
+.add{
+    width: 60px;
+    height: 30px;
+}
+.name{
+    width: 25px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.add2{
+    width: 25px;
+
+}

@@ -33,12 +33,13 @@ $pokemonSpeed = null;
 $pokemonHeight = null;
 $pokemonCounter = 1;
 
-while ($pokemonCounter <= 1279) {
+while ($pokemonCounter <= 20) {
     $pokeGET2 = ('https://pokeapi.co/api/v2//pokemon/' . $pokemonCounter . '/');
 
     $pokeread = file_get_contents($pokeGET2);
     $pokeConvert = json_decode($pokeread, TRUE);
     $pokemonName = $pokeConvert['name'];
+    $pokemonImage = $pokeConvert['sprites']['front_default'];
     $pokemonType = $pokeConvert['types'][0]['type']['name'];
     $pokemonType2 = $pokeConvert['types'][1]['type']['name'];
     $pokemonAbility = $pokeConvert['abilities'][0]['ability']['name'];
@@ -89,7 +90,7 @@ while ($pokemonCounter <= 1279) {
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "INSERT INTO pokeall
-        (no, name, type, type2, height, weight, ability1, ability2, ability3, ability4, hp, attack, defense, spattack, spdefense, speed) VALUES ('$pokemonCounter','$pokemonName', '$pokemonType', '$pokemonType2', '$pokemonHeight', '$pokemonWeight', '$pokemonAbility', '$pokemonAbility22', '$pokemonAbility33', '$pokemonAbility44', '$pokemonHP', '$pokemonAttack','$pokemonDefense','$pokemonSpA','$pokemonSpD','$pokemonSpeed')";
+        (no, name, image, type, type2, height, weight, ability1, ability2, ability3, ability4, hp, attack, defense, spattack, spdefense, speed) VALUES ('$pokemonCounter','$pokemonName','$pokemonImage', '$pokemonType', '$pokemonType2', '$pokemonHeight', '$pokemonWeight', '$pokemonAbility', '$pokemonAbility22', '$pokemonAbility33', '$pokemonAbility44', '$pokemonHP', '$pokemonAttack','$pokemonDefense','$pokemonSpA','$pokemonSpD','$pokemonSpeed')";
         // use exec() because no results are returned
         $conn->exec($sql);
         echo "New record created successfully";
