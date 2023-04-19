@@ -1,9 +1,8 @@
 <?php
-include '../partials/connect.php';
+include '../../partials/connect.php';
 
 session_start();
 if(isset($_GET['add'])){
-	if(isset($_SESSION['id_dangky'])){
     $idpkm=$_GET['hao'];
 
     $iduser=$_SESSION['id_khachhang'];
@@ -13,11 +12,8 @@ if(isset($_GET['add'])){
         $iduser,
         $idpkm,
     ]);
-    header("location:myteam.php");
-	}else{
-		header("location:login.php");
+    header("location:../view/myteam.php");
 	}
-}
 else{
     echo "k";
 }

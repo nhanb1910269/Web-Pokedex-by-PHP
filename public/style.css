@@ -1,14 +1,12 @@
-
-a{
-    list-style: none;
-    text-decoration: none;
-    padding-left: 20px;
-}
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: aquamarine;
     font-size: 20px;
+    align-items: center;
+    height: 150px;
+}
+header > a{
     text-decoration: none;
 }
 .id_dangky{
@@ -21,7 +19,7 @@ header{
 .name{
     width: 25px;
 }
-h2{
+h3{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -29,4 +27,16 @@ h2{
 .add2{
     width: 25px;
 
+}
+.td{
+    display: flex;
+    justify-items: center;
+}
+
+h3{
+    font-size: 200px;
+}
+
+tbody > tr {
+    align-items: center;
 }

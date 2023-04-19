@@ -1,13 +1,19 @@
 
-<?php include '../partials/connect.php'; ?>
+<?php include '../../partials/connect.php'; ?>
 <?php   
-$sqlall="SELECT id_pkm,name,image,type,type2 from pokeall";
+if(isset($_GET['add'])){
+    $idpkm=$_GET['hao'];
 
-$data=$pdo->prepare($sqlall);
-$data->execute();
-
-
-
+    $iduser=$_SESSION['id_khachhang'];
+    $sqlteam="SELECT *  WHERE id_pkm=?;";
+    $team=$pdo->prepare($sqlteam);
+    $team->execute([
+        $idpkm,
+    ]);
+	}
+else{
+    echo "k";
+}
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +23,7 @@ $data->execute();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
@@ -39,7 +45,7 @@ $data->execute();
 			 ?>
 			 </header>
 <div class="form">
-<h2>Danh sách Pokemon</h2>
+<h2>Pokemon</h2>
  <div class="table">
    <div class="table-title d-flex pl-2 justify-content-around">
    <div class="">ID</div>
@@ -53,12 +59,7 @@ $data->execute();
 
 </div>
 <hr/>
-<?php 
-$i=0;
-    while ($row=$data->fetch()) {
-		
-        $i++;   
-?>
+
 <form method="GET" action="add.php">  
 <div class="d-flex justify-content-around">
 	
@@ -83,6 +84,5 @@ $i=0;
     
   
 
-<?php    } ?>
 </body>
 </html>

@@ -1,5 +1,5 @@
 
-<?php include '../partials/connect.php'; ?>
+<?php include '../../partials/connect.php'; ?>
 <?php
 session_start();
 
@@ -23,17 +23,17 @@ $data->execute(
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
 	<header>
 	<?php
 			if(isset($_SESSION['dangky'])){
-			 echo '<h3>Chao,' .$_SESSION['dangky']. '</h3>' ;
-             echo '<a href="index.php">Trang chu</a>';
-             echo '<a href="myteam.php">MyTeam</a>';
-			 echo '<a href="logout.php">Đăng xuất</a>';
+			 echo '<h3>Chào ' .$_SESSION['dangky']. '</h3>' ;
+             echo '<a href="index.php">Trang chủ</a>';
+             echo '<a href="myteam.php">My Team</a>';
+			 echo '<a href="../controller/logout.php">Đăng xuất</a>';
 			 echo '</br>';
 
 			 //echo $_SESSION['id_khachhang'];
@@ -60,7 +60,7 @@ $i=0;
 		
         $i++;   
 ?>
-<form method="GET" action="delete.php">  
+<form method="GET" action="../controller/delete.php">  
 <div class="d-flex justify-content-around">
 	
 <div><input class="add2"name="hao"value="<?php echo $idteam =$row['id_team'];?>"></div>
