@@ -2,15 +2,14 @@
 
 Học kỳ 2, Năm học 2022-2023
 
-**MSSV 1** : 
+**MSSV 1** : B1910269
+**Họ tên SV 1**: Nguyễn Hiếu Nhân
 
-**Họ tên SV 1**:
+**MSSV 2**: B1910372
 
-**MSSV 2**:
+**Họ tên SV 2**: Ngô Nhật Hảo
 
-**Họ tên SV 2**:
+**Lớp học phần**: 01
 
-**Lớp học phần**:
-
-**Tên dự án**:
+**Tên dự án**: Pokedex
 
