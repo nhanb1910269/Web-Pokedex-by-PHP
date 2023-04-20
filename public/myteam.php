@@ -1,5 +1,5 @@
 
-<?php include '../../partials/connect.php'; ?>
+<?php include '../partials/connect.php'; ?>
 <?php
 session_start();
 
@@ -33,7 +33,7 @@ $data->execute(
 			 echo '<h3>Chào ' .$_SESSION['dangky']. '</h3>' ;
              echo '<a href="index.php">Trang chủ</a>';
              echo '<a href="myteam.php">My Team</a>';
-			 echo '<a href="../controller/logout.php">Đăng xuất</a>';
+			 echo '<a href="/public/logout.php">Đăng xuất</a>';
 			 echo '</br>';
 
 			 //echo $_SESSION['id_khachhang'];
@@ -60,7 +60,7 @@ $i=0;
 		
         $i++;   
 ?>
-<form method="GET" action="../controller/delete.php">  
+<form method="GET" action="../public/delete.php">  
 <div class="d-flex justify-content-around">
 	
 <div><input class="add2"name="hao"value="<?php echo $idteam =$row['id_team'];?>"></div>

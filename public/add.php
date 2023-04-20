@@ -1,5 +1,5 @@
 <?php
-include '../../partials/connect.php';
+include '../partials/connect.php';
 
 session_start();
 if(isset($_GET['add'])){
@@ -12,7 +12,7 @@ if(isset($_GET['add'])){
         $iduser,
         $idpkm,
     ]);
-    header("location:../view/myteam.php");
+    header("location:../public/myteam.php");
 	}
 else{
     echo "k";

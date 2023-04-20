@@ -1,5 +1,5 @@
 
-<?php include '../../partials/connect.php'; ?>
+<?php include '../partials/connect.php'; ?>
 <?php   
 if(isset($_GET['add'])){
     $idpkm=$_GET['hao'];

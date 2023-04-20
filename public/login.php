@@ -1,4 +1,4 @@
-<?php include '../../partials/connect.php';
+<?php include '../partials/connect.php';
 ?>
 <?php
 session_start();

@@ -1,5 +1,5 @@
 <?php
-include '../../partials/connect.php';
+include '../partials/connect.php';
 
 session_start();
 if(isset($_GET['delete'])){
@@ -10,7 +10,7 @@ if(isset($_GET['delete'])){
     $Dteam->execute([
         $idteam,
     ]);
-    header("location:../view/myteam.php");
+    header("location:../public/myteam.php");
 }
 else{
     echo "k";

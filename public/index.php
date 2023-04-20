@@ -1,4 +1,4 @@
-<?php include '../../partials/connect.php'; ?>
+<?php include '../partials/connect.php'; ?>
 <?php
 $sqlall = "SELECT id_pkm,name,image,type,type2,height,weight,attack,defense,spattack,spdefense,speed from pokeall";
 
@@ -28,7 +28,7 @@ $data->execute();
             echo '<h3>Chào ' . $_SESSION['dangky'] . '</h3>';
             echo '<a href="index.php">Trang chủ</a>';
             echo '<a href="myteam.php">My Team</a>';
-            echo '<a href="../controller/logout.php">Đăng xuất</a>';
+            echo '<a href="../public/logout.php">Đăng xuất</a>';
             echo '<a href="doimatkhau.php">Đổi mật khẩu</a>';
             echo '</br>';
 
@@ -65,7 +65,7 @@ $data->execute();
                 while ($row = $data->fetch()) {
 
                     $i++;
-                    ?><form method="GET" action="../controller/add.php">
+                    ?><form method="GET" action="../public/add.php">
                     <tbody>
                         <tr>
                             <th scope="row" class=""><div><input class="name" name="hao"value="<?php echo $id_pkm =$row['id_pkm'];?>"></div>
